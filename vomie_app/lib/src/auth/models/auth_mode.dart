@@ -1,0 +1,4 @@
+enum AuthMode {
+  register,
+  login,
+}
