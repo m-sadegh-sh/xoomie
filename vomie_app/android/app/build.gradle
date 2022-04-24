@@ -44,8 +44,8 @@ android {
 
     defaultConfig {
         applicationId "io.webplex.vomie"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
