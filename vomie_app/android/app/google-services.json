@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "877184783974",
+    "project_id": "io-webplex-vomie",
+    "storage_bucket": "io-webplex-vomie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877184783974:android:41130e33c151ced82abfa7",
+        "android_client_info": {
+          "package_name": "io.webplex.vomie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877184783974-dpl3hftqlv89hk2vacq2jk4hq4qiok77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_HT7svZGIVt4qu26ucN2JH8ETh939nYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877184783974-dpl3hftqlv89hk2vacq2jk4hq4qiok77.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "877184783974-l8ta8tkrh2aa0qvojkbhbjco8qe8s2r8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.webplex.vomie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
