@@ -1,1 +1,0 @@
- H:\\ThePersonalTrunk\\vomie\\vomie_app\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations_en.dart H:\\ThePersonalTrunk\\vomie\\vomie_app\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations.dart:  H:\\ThePersonalTrunk\\vomie\\vomie_app\\l10n.yaml H:\\ThePersonalTrunk\\vomie\\vomie_app\\lib/src/localization\\app_en.arb
