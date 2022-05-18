@@ -46,6 +46,28 @@ flutter:
   assets:
     - assets/images/
 
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins_thin.ttf
+          weight: 100
+        - asset: assets/fonts/poppins_extra_light.ttf
+          weight: 200
+        - asset: assets/fonts/poppins_light.ttf
+          weight: 300
+        - asset: assets/fonts/poppins_regular.ttf
+          weight: 400
+        - asset: assets/fonts/poppins_medium.ttf
+          weight: 500
+        - asset: assets/fonts/poppins_semi_bold.ttf
+          weight: 600
+        - asset: assets/fonts/poppins_bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins_extra_bold.ttf
+          weight: 800
+        - asset: assets/fonts/poppins_black.ttf
+          weight: 900
+
 flutter_gen:
   output: .dart_tool/flutter_gen
   integrations:
