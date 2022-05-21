@@ -2,18 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Vomie App (debug)",
+            "name": "Zoomie App (debug)",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "Vomie App (profile)",
+            "name": "Zoomie App (profile)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "Vomie App (release)",
+            "name": "Zoomie App (release)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

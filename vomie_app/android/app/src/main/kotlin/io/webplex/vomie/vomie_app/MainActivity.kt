@@ -1,4 +1,4 @@
-package io.webplex.vomie
+package io.webplex.zoomie
 
 import io.flutter.embedding.android.FlutterActivity
 
