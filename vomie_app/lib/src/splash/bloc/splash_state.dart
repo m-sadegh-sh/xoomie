@@ -1,5 +1,5 @@
-import 'package:vomie/src/base/bloc/state_base.dart';
-import 'package:vomie/src/base/widgets/localized_text.dart';
+import 'package:zoomie/src/base/bloc/state_base.dart';
+import 'package:zoomie/src/base/widgets/localized_text.dart';
 
 abstract class SplashStateBase extends StateBase {
   const SplashStateBase();
