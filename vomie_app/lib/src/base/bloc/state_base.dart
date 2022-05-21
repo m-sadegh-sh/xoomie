@@ -5,4 +5,7 @@ abstract class StateBase extends Equatable {
 
   @override
   List<Object?> get props => [];
+
+  @override
+  String toString();
 }
