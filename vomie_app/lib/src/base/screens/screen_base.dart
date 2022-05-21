@@ -1,37 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:vomie/src/base/widgets/gradient_background.dart';
 
 abstract class ScreenBase extends StatelessWidget {
   const ScreenBase({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return GradientBackground(
-      colors: createBackgroundColors(context),
-      child: Scaffold(
-        appBar: appBar(context),
-        body: SafeArea(
-          child: buildBody(context),
-        ),
-        bottomNavigationBar: bottomNavigationBar(context),
-        bottomSheet: bottomSheet(context),
+    return Scaffold(
+      appBar: appBar(context),
+      body: SafeArea(
+        child: buildBody(context),
       ),
+      bottomNavigationBar: bottomNavigationBar(context),
+      bottomSheet: bottomSheet(context),
     );
   }
 
-  List<Color> createBackgroundColors(BuildContext context) {
-    return [Colors.red];
-    // return context.decide(
-    //   light: ,
-    //   dark: [Colors.blue],
-    // );
-  }
-
   PreferredSizeWidget? appBar(BuildContext context) {
+    final title = appBarTitle(context);
+    final canPop = Navigator.of(context).canPop();
+
+    if (title == null && !canPop) return null;
+
     return AppBar(
-      title: appBarTitle(context),
+      title: title,
     );
   }
 

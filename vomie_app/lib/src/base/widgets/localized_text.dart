@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,8 +13,8 @@ class LocalizedText extends StatelessWidget {
     this.onGenerate, {
     this.style,
     this.textAlign,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   static List<LocalizationsDelegate<dynamic>> get localizationsDelegates =>
       AppLocalizations.localizationsDelegates;

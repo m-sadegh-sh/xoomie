@@ -7,8 +7,8 @@ class GradientBackground extends StatelessWidget {
   const GradientBackground({
     required this.colors,
     required this.child,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
