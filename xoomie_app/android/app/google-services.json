@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "436041232880-ic6ipc8hkdra6ojm5rhcs4r8dd4ugmr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.webplex.xoomie",
+            "certificate_hash": "665b8bbded7843e1e6587ec1d7694c53b87015ff"
+          }
+        },
+        {
           "client_id": "436041232880-63juum6kc17faqv9qmaouj28u1dukci3.apps.googleusercontent.com",
           "client_type": 3
         }
