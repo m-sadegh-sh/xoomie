@@ -1,8 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/styling/color_palette.dart';
-import 'package:zoomie/src/styling/helpers.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/styling/color_palette.dart';
+import 'package:xoomie/src/styling/helpers.dart';
+import 'package:xoomie/src/styling/variables.dart';
 
 const baseTextStyle = TextStyle(
   fontFamily: fontFamily,

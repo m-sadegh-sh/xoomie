@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/sign_in/views/sign_in_method_screen.dart';
+import 'package:xoomie/src/sign_in/views/sign_in_method_screen.dart';
 
 class SignInMethodPage extends Page {
   const SignInMethodPage({

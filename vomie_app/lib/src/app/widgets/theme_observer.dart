@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/theme/bloc/theme_bloc.dart';
-import 'package:zoomie/src/theme/bloc/theme_event.dart';
+import 'package:xoomie/src/theme/bloc/theme_bloc.dart';
+import 'package:xoomie/src/theme/bloc/theme_event.dart';
 
 class ThemeObserver extends StatefulWidget {
   final Widget child;

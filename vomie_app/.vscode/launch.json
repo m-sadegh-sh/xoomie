@@ -2,18 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Zoomie App (debug)",
+            "name": "Xoomie App (debug)",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "Zoomie App (profile)",
+            "name": "Xoomie App (profile)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "Zoomie App (release)",
+            "name": "Xoomie App (release)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

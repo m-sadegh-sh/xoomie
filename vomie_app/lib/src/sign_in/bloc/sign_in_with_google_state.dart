@@ -1,5 +1,5 @@
-import 'package:zoomie/src/base/bloc/state_base.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/base/bloc/state_base.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
 
 abstract class SignInWithGoogleStateBase extends StateBase {
   const SignInWithGoogleStateBase();

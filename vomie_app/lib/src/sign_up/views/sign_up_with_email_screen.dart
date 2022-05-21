@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
-import 'package:zoomie/src/base/bloc/localized_error_builder.dart';
-import 'package:zoomie/src/base/screens/screen_base.dart';
-import 'package:zoomie/src/base/widgets/auto_unfocus.dart';
-import 'package:zoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/extensions/function.dart';
-import 'package:zoomie/src/sign_up/bloc/sign_up_with_email_bloc.dart';
-import 'package:zoomie/src/sign_up/bloc/sign_up_with_email_state.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/base/bloc/localized_error_builder.dart';
+import 'package:xoomie/src/base/screens/screen_base.dart';
+import 'package:xoomie/src/base/widgets/auto_unfocus.dart';
+import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/extensions/function.dart';
+import 'package:xoomie/src/sign_up/bloc/sign_up_with_email_bloc.dart';
+import 'package:xoomie/src/sign_up/bloc/sign_up_with_email_state.dart';
+import 'package:xoomie/src/styling/variables.dart';
 
 class SignUpWithEmailScreen extends ScreenBase {
   const SignUpWithEmailScreen({

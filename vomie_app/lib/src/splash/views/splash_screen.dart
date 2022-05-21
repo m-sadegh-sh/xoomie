@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/base/screens/screen_base.dart';
-import 'package:zoomie/src/base/widgets/default_value_switcher.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/splash/bloc/splash_bloc.dart';
-import 'package:zoomie/src/splash/bloc/splash_state.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/base/screens/screen_base.dart';
+import 'package:xoomie/src/base/widgets/default_value_switcher.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/splash/bloc/splash_bloc.dart';
+import 'package:xoomie/src/splash/bloc/splash_state.dart';
+import 'package:xoomie/src/styling/variables.dart';
 import 'package:flutter_gen/assets.gen.dart';
 
 class SplashScreen extends ScreenBase {

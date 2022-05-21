@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/auth/bloc/auth_repository.dart';
-import 'package:zoomie/src/auth/bloc/auth_state.dart';
-import 'package:zoomie/src/auth/bloc/auth_event.dart';
-import 'package:zoomie/src/auth/models/user_model.dart';
+import 'package:xoomie/src/auth/bloc/auth_repository.dart';
+import 'package:xoomie/src/auth/bloc/auth_state.dart';
+import 'package:xoomie/src/auth/bloc/auth_event.dart';
+import 'package:xoomie/src/auth/models/user_model.dart';
 
 class AuthBloc extends Bloc<AuthEventBase, AuthStateBase> {
   final AuthRepositoryBase repository;

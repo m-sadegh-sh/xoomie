@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.webplex.zoomie">
-    <application android:label="Zoomie"
+    package="io.webplex.xoomie">
+    <application android:label="Xoomie"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity android:name=".MainActivity"

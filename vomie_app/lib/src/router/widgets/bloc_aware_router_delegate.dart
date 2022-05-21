@@ -1,21 +1,21 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/auth/bloc/auth_bloc.dart';
-import 'package:zoomie/src/auth/bloc/auth_state.dart';
-import 'package:zoomie/src/home/views/home_page.dart';
-import 'package:zoomie/src/introduction/views/introduction_page.dart';
-import 'package:zoomie/src/router/bloc/router_bloc.dart';
-import 'package:zoomie/src/router/bloc/router_event.dart';
-import 'package:zoomie/src/router/bloc/router_state.dart';
-import 'package:zoomie/src/sign_in/views/sign_in_method_page.dart';
-import 'package:zoomie/src/sign_in/views/sign_in_with_email_page.dart';
-import 'package:zoomie/src/sign_in/views/sign_in_with_google_page.dart';
-import 'package:zoomie/src/sign_up/views/sign_up_method_page.dart';
-import 'package:zoomie/src/sign_up/views/sign_up_with_email_page.dart';
-import 'package:zoomie/src/splash/bloc/splash_bloc.dart';
-import 'package:zoomie/src/splash/bloc/splash_state.dart';
-import 'package:zoomie/src/splash/views/splash_page.dart';
-import 'package:zoomie/src/unknown/views/unknown_page.dart';
+import 'package:xoomie/src/auth/bloc/auth_bloc.dart';
+import 'package:xoomie/src/auth/bloc/auth_state.dart';
+import 'package:xoomie/src/home/views/home_page.dart';
+import 'package:xoomie/src/introduction/views/introduction_page.dart';
+import 'package:xoomie/src/router/bloc/router_bloc.dart';
+import 'package:xoomie/src/router/bloc/router_event.dart';
+import 'package:xoomie/src/router/bloc/router_state.dart';
+import 'package:xoomie/src/sign_in/views/sign_in_method_page.dart';
+import 'package:xoomie/src/sign_in/views/sign_in_with_email_page.dart';
+import 'package:xoomie/src/sign_in/views/sign_in_with_google_page.dart';
+import 'package:xoomie/src/sign_up/views/sign_up_method_page.dart';
+import 'package:xoomie/src/sign_up/views/sign_up_with_email_page.dart';
+import 'package:xoomie/src/splash/bloc/splash_bloc.dart';
+import 'package:xoomie/src/splash/bloc/splash_state.dart';
+import 'package:xoomie/src/splash/views/splash_page.dart';
+import 'package:xoomie/src/unknown/views/unknown_page.dart';
 
 class BlocAwareRouterDelegate extends RouterDelegate
     with ChangeNotifier, PopNavigatorRouterDelegateMixin {

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:zoomie/firebase_options.dart';
-import 'package:zoomie/src/app/views/app_container.dart';
-import 'package:zoomie/src/base/bloc/app_bloc_observer.dart';
-import 'package:zoomie/src/injection/root_services_registerar.dart';
+import 'package:xoomie/firebase_options.dart';
+import 'package:xoomie/src/app/views/app_container.dart';
+import 'package:xoomie/src/base/bloc/app_bloc_observer.dart';
+import 'package:xoomie/src/injection/root_services_registerar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

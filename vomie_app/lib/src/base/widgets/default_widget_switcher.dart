@@ -1,6 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/styling/color_palette.dart';
+import 'package:xoomie/src/styling/color_palette.dart';
 
 class DefaultWidgetSwitcher extends StatelessWidget {
   final Duration duration;

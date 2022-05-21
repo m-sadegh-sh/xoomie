@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:olive/extensions.dart';
-import 'package:zoomie/src/auth/models/user_model.dart';
+import 'package:xoomie/src/auth/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthRepositoryBase {

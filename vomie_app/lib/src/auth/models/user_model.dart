@@ -1,4 +1,4 @@
-import 'package:zoomie/src/base/models/model_base.dart';
+import 'package:xoomie/src/base/models/model_base.dart';
 
 class UserModel extends ModelBase {
   final String email;

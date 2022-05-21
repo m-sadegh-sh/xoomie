@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/styling/variables.dart';
 
 InputBorder createInputBorder({
   required Color borderColor,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/app/views/app_screen.dart';
-import 'package:zoomie/src/auth/bloc/auth_bloc.dart';
-import 'package:zoomie/src/injection/container.dart';
-import 'package:zoomie/src/router/bloc/router_bloc.dart';
-import 'package:zoomie/src/splash/bloc/splash_bloc.dart';
-import 'package:zoomie/src/theme/bloc/theme_bloc.dart';
+import 'package:xoomie/src/app/views/app_screen.dart';
+import 'package:xoomie/src/auth/bloc/auth_bloc.dart';
+import 'package:xoomie/src/injection/container.dart';
+import 'package:xoomie/src/router/bloc/router_bloc.dart';
+import 'package:xoomie/src/splash/bloc/splash_bloc.dart';
+import 'package:xoomie/src/theme/bloc/theme_bloc.dart';
 
 class AppContainer extends StatelessWidget {
   const AppContainer({

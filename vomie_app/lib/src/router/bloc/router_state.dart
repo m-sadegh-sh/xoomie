@@ -1,5 +1,5 @@
-import 'package:zoomie/src/base/bloc/state_base.dart';
-import 'package:zoomie/src/router/models/home_contents.dart';
+import 'package:xoomie/src/base/bloc/state_base.dart';
+import 'package:xoomie/src/router/models/home_contents.dart';
 
 abstract class RouterStateBase extends StateBase {
   const RouterStateBase();

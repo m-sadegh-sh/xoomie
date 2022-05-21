@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(zoomie LANGUAGES CXX)
+project(xoomie LANGUAGES CXX)
 
-set(BINARY_NAME "Zoomie")
+set(BINARY_NAME "Xoomie")
 
 cmake_policy(SET CMP0063 NEW)
 

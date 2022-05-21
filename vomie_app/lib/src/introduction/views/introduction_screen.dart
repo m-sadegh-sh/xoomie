@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:olive/extensions.dart';
-import 'package:zoomie/src/base/screens/screen_base.dart';
-import 'package:zoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/router/bloc/router_bloc.dart';
-import 'package:zoomie/src/router/bloc/router_event.dart';
-import 'package:zoomie/src/styling/color_palette.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/base/screens/screen_base.dart';
+import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/router/bloc/router_bloc.dart';
+import 'package:xoomie/src/router/bloc/router_event.dart';
+import 'package:xoomie/src/styling/color_palette.dart';
+import 'package:xoomie/src/styling/variables.dart';
 import 'package:introduction_screen/introduction_screen.dart' as intro;
 import 'package:flutter_gen/assets.gen.dart';
 

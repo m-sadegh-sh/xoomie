@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/app/widgets/theme_observer.dart';
-import 'package:zoomie/src/base/widgets/auto_unfocus.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/router/widgets/bloc_aware_router_delegate.dart';
-import 'package:zoomie/src/styling/themes.dart';
-import 'package:zoomie/src/theme/bloc/theme_bloc.dart';
-import 'package:zoomie/src/theme/bloc/theme_state.dart';
+import 'package:xoomie/src/app/widgets/theme_observer.dart';
+import 'package:xoomie/src/base/widgets/auto_unfocus.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/router/widgets/bloc_aware_router_delegate.dart';
+import 'package:xoomie/src/styling/themes.dart';
+import 'package:xoomie/src/theme/bloc/theme_bloc.dart';
+import 'package:xoomie/src/theme/bloc/theme_state.dart';
 
 class AppScreen extends StatelessWidget {
   const AppScreen({

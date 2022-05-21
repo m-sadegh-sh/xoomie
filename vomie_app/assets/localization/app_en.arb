@@ -1,4 +1,56 @@
 {
-  "appTitle": "Vomie",
-  "commonWaiting": "Please wait..."
+  "appTitle": "Xoomie",
+
+  "commonWaiting": "Please wait...",
+  "commonDefaultError": "An unexpected error has occurred.",
+  "commonTermsOfUse": "Terms of use",
+  "commonPrivacyPolicy": "Privacy policy",
+
+  "formValidationRequired": "This field is required.",
+  "formValidationEmail": "The email address is badly formatted.",
+
+  "splashBlocBootstrapping": "Bootstrapping...",
+  "splashBlocFinishingUp": "Finishing up...",
+  "splashBlocInitializingFailed": "Failed to initialize.",
+  "splashScreenInitialized": "",
+
+  "authBlocSignInFailed": "Failed to sign in.",
+  "authBlocSignOutFailed": "Failed to sign out.",
+
+  "introductionScreenSlide1Title": "Watch trailers",
+  "introductionScreenSlide1mBody": "Catch new trailers from the year's biggest movies and TV shows",
+  "introductionScreenSlide2Title": "Create a Watchlist",
+  "introductionScreenSlide2Body": "Keep track of what you want to watch",
+  "introductionScreenSlide3Title": "Rate your favorites",
+  "introductionScreenSlide3Body": "Weigh in on the movies and TV shows you've watched",
+  "introductionScreenSignUp": "Sign up",
+  "introductionScreenExistingAccount": "Already have an account?",
+  "introductionScreenSignIn": "Sign in",
+
+  "signUpMethodScreenTitle": "Sign up to continue",
+  "signUpMethodScreenContinueWithEmail": "Continue with email",
+
+  "signUpWithEmailBlocSignUpFailed": "Failed to sign you up.",
+  "signUpWithEmailScreenTitle": "Your email",
+  "signUpWithEmailScreenDescription": "Please enter a new email address and password. Then tap on the \"Sign up\" button to proceed.",
+  "signUpWithEmailScreenEmail": "Email",
+  "signUpWithEmailScreenPassword": "Password",
+  "signUpWithEmailScreenSignUp": "Sign up",
+
+  "signInMethodScreenTitle": "Sign in to continue",
+  "signInMethodScreenContinueWithEmail": "Continue with email",
+  "signInMethodScreenOtherMethods": "or with",
+
+  "signInWithEmailBlocSignUpFailed": "Failed to sign you in.",
+  "signInWithEmailScreenTitle": "Sign in with Email",
+  "signInWithEmailScreenDescription": "Please enter your email address and password. Then tap on the \"Sign in\" button to proceed.",
+  "signInWithEmailScreenEmail": "Email",
+  "signInWithEmailScreenPassword": "Password",
+  "signInWithEmailScreenSignIn": "Sign in",
+
+  "signInWithGoogleBlocSignInFailed": "Failed to sign you in using Google.",
+  "signInWithGoogleScreenTitle": "Sign in with Google",
+  "signInWithGoogleScreenSigninIn": "Please wait will we're signing in you.",
+  "signInWithGoogleScreenSignInFailed": "Failed to sign you in using Google. To make another try, tap on the \"Retry\" button.",
+  "signInWithGoogleScreenRetry": "Retry"
 }

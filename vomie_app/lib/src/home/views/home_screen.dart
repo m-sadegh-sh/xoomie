@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/base/screens/screen_base.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/sign_out/bloc/sign_out_bloc.dart';
-import 'package:zoomie/src/sign_out/bloc/sign_out_event.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/base/screens/screen_base.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/sign_out/bloc/sign_out_bloc.dart';
+import 'package:xoomie/src/sign_out/bloc/sign_out_event.dart';
+import 'package:xoomie/src/styling/variables.dart';
 
 class HomeScreen extends ScreenBase {
   const HomeScreen({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/unknown/views/unknown_screen.dart';
+import 'package:xoomie/src/unknown/views/unknown_screen.dart';
 
 class UnknownPage extends Page {
   const UnknownPage({

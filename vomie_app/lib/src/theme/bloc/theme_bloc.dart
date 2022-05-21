@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:zoomie/src/theme/bloc/theme_event.dart';
-import 'package:zoomie/src/theme/bloc/theme_state.dart';
+import 'package:xoomie/src/theme/bloc/theme_event.dart';
+import 'package:xoomie/src/theme/bloc/theme_state.dart';
 
 class ThemeBloc extends HydratedBloc<ThemeEventBase, ThemeStateBase> {
   late final StreamSubscription _subscription;

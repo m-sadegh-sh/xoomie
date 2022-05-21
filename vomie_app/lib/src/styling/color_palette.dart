@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/extensions/color.dart';
-import 'package:zoomie/src/styling/helpers.dart';
+import 'package:xoomie/src/extensions/color.dart';
+import 'package:xoomie/src/styling/helpers.dart';
 
 /// Generic colors
 const transparentColor = Colors.transparent;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/splash/views/splash_screen.dart';
+import 'package:xoomie/src/splash/views/splash_screen.dart';
 
 class SplashPage extends Page {
   const SplashPage({

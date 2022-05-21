@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
 
 String localizedErrorBuilder(BuildContext context, Object? error) {
   switch (error) {

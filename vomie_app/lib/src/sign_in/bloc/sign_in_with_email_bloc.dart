@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/sign_in/bloc/sign_in_repository.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/sign_in/bloc/sign_in_repository.dart';
 
 class SignInWithEmailBloc
     extends FormBloc<GenerateLocalizedString, GenerateLocalizedString> {
@@ -14,7 +14,7 @@ class SignInWithEmailBloc
       FieldBlocValidators.required,
       FieldBlocValidators.email,
     ],
-    initialValue: 'shad@zoomie.webplex.io',
+    initialValue: 'shad@xoomie.webplex.io',
   );
 
   final passwordField = TextFieldBloc<String>(

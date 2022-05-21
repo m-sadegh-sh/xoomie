@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/base/screens/screen_base.dart';
+import 'package:xoomie/src/base/screens/screen_base.dart';
 
 class UnknownScreen extends ScreenBase {
   const UnknownScreen({

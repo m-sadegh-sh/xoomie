@@ -1,4 +1,4 @@
-import 'package:zoomie/src/base/bloc/state_base.dart';
+import 'package:xoomie/src/base/bloc/state_base.dart';
 
 abstract class AuthStateBase extends StateBase {
   const AuthStateBase();

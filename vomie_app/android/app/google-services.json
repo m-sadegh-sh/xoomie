@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "877184783974",
-    "project_id": "io-webplex-vomie",
-    "storage_bucket": "io-webplex-vomie.appspot.com"
+    "project_id": "io-webplex-xoomie",
+    "storage_bucket": "io-webplex-xoomie.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:877184783974:android:41130e33c151ced82abfa7",
         "android_client_info": {
-          "package_name": "io.webplex.vomie"
+          "package_name": "io.webplex.xoomie"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "877184783974-l8ta8tkrh2aa0qvojkbhbjco8qe8s2r8.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "io.webplex.vomie"
+                "bundle_id": "io.webplex.xoomie"
               }
             }
           ]

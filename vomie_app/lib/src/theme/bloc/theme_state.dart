@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/base/bloc/state_base.dart';
-import 'package:zoomie/src/styling/color_palette.dart';
+import 'package:xoomie/src/base/bloc/state_base.dart';
+import 'package:xoomie/src/styling/color_palette.dart';
 
 abstract class ThemeStateBase extends StateBase {
   const ThemeStateBase();

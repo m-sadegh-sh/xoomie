@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zoomie/src/router/bloc/router_event.dart';
-import 'package:zoomie/src/router/bloc/router_state.dart';
+import 'package:xoomie/src/router/bloc/router_event.dart';
+import 'package:xoomie/src/router/bloc/router_state.dart';
 
 class RouterBloc extends Bloc<RouterEventBase, RouterStateBase> {
   RouterBloc() : super(const RouterInitialState()) {

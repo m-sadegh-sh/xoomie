@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/introduction/views/introduction_screen.dart';
+import 'package:xoomie/src/introduction/views/introduction_screen.dart';
 
 class IntroductionPage extends Page {
   const IntroductionPage({

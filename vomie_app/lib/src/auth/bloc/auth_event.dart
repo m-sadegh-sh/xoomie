@@ -1,4 +1,4 @@
-import 'package:zoomie/src/base/bloc/event_base.dart';
+import 'package:xoomie/src/base/bloc/event_base.dart';
 
 abstract class AuthEventBase extends EventBase {
   const AuthEventBase();

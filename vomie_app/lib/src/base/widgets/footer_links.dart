@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/base/widgets/localized_text.dart';
-import 'package:zoomie/src/styling/variables.dart';
+import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/styling/variables.dart';
 
 class FooterLinks extends StatelessWidget {
   const FooterLinks({

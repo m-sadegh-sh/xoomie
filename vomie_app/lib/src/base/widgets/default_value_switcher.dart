@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoomie/src/base/widgets/default_widget_switcher.dart';
+import 'package:xoomie/src/base/widgets/default_widget_switcher.dart';
 
 class DefaultValueSwitcher<T> extends StatefulWidget {
   final T? value;

@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:async';
 
-import 'package:zoomie/src/splash/bloc/splash_state.dart';
+import 'package:xoomie/src/splash/bloc/splash_state.dart';
 import 'package:olive/extensions.dart';
-import 'package:zoomie/src/splash/bloc/splash_event.dart';
+import 'package:xoomie/src/splash/bloc/splash_event.dart';
 
 class SplashBloc extends Bloc<SplashEventBase, SplashStateBase> {
   SplashBloc() : super(const SplashInitialState()) {
