@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:xoomie/src/base/screens/screen_base.dart';
 import 'package:xoomie/src/base/widgets/default_value_switcher.dart';
 import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/extensions/generic.dart';
 import 'package:xoomie/src/splash/bloc/splash_bloc.dart';
 import 'package:xoomie/src/splash/bloc/splash_state.dart';
 import 'package:xoomie/src/styling/variables.dart';
@@ -121,7 +122,9 @@ class _SplashText extends StatelessWidget {
       padding: const EdgeInsets.all(paddingMedium),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadiusMedium),
-        color: failed ? theme.errorColor : null,
+        color: theme.errorColor.when(
+          condition: failed,
+        ),
       ),
       child: LocalizedText(
         text,

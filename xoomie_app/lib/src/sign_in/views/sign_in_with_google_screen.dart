@@ -4,7 +4,8 @@ import 'package:xoomie/src/base/screens/screen_base.dart';
 import 'package:xoomie/src/base/widgets/default_value_switcher.dart';
 import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
 import 'package:xoomie/src/base/widgets/localized_text.dart';
-import 'package:xoomie/src/extensions/function.dart';
+import 'package:xoomie/src/base/widgets/message_box.dart';
+import 'package:xoomie/src/extensions/generic.dart';
 import 'package:xoomie/src/sign_in/bloc/sign_in_with_google_bloc.dart';
 import 'package:xoomie/src/sign_in/bloc/sign_in_with_google_event.dart';
 import 'package:xoomie/src/sign_in/bloc/sign_in_with_google_state.dart';
@@ -22,80 +23,73 @@ class SignInWithGoogleScreen extends ScreenBase {
     final bloc = BlocProvider.of<SignInWithGoogleBloc>(context);
 
     return BlocBuilder<SignInWithGoogleBloc, SignInWithGoogleStateBase>(
-      builder: (_, state) => ExpandedSingleChildScrollView(
-        builder: (context, constraints) => Padding(
-          padding: const EdgeInsets.all(paddingXXLarge),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              LocalizedText(
-                (x) => x.signInWithGoogleScreenTitle,
-                style: textTheme.titleLarge,
-              ),
-              const SizedBox(
-                height: paddingXSmall,
-              ),
-              DefaultValueSwitcher<GenerateLocalizedString>(
-                value: (x) => state is! SignInWithGoogleSignInFailedState
-                    ? x.signInWithGoogleScreenSignInFailed
-                    : x.signInWithGoogleScreenSigninIn,
-                builder: (value) => LocalizedText(
-                  value,
-                  style: textTheme.bodySmall,
+      builder: (_, state) {
+        final isFailed = state is SignInWithGoogleSignInFailedState;
+
+        return ExpandedSingleChildScrollView(
+          builder: (context, constraints) => Padding(
+            padding: const EdgeInsets.all(paddingXXLarge),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                LocalizedText(
+                  (x) => x.signInWithGoogleScreenTitle,
+                  style: textTheme.titleLarge,
                 ),
-              ),
-              DefaultValueSwitcher<GenerateLocalizedString>(
-                value: state is SignInWithGoogleSignInFailedState
-                    ? state.message
-                    : (x) => '',
-                builder: (value) => Container(
-                  margin: const EdgeInsets.only(
-                    top: paddingMedium,
-                  ),
-                  padding: const EdgeInsets.all(paddingMedium),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).errorColor.withOpacity(0.2),
-                    border: Border.all(
-                      color: Theme.of(context).errorColor,
-                      width: 2.0,
+                const SizedBox(
+                  height: paddingXSmall,
+                ),
+                DefaultValueSwitcher<GenerateLocalizedString>(
+                  value: (x) => isFailed
+                      ? x.signInWithGoogleScreenSignInFailed
+                      : x.signInWithGoogleScreenSigninIn,
+                  builder: (value) => SizedBox(
+                    width: double.infinity,
+                    child: LocalizedText(
+                      value,
+                      style: textTheme.bodySmall,
                     ),
-                    borderRadius: BorderRadius.circular(borderRadiusMedium),
-                  ),
-                  child: LocalizedText(
-                    value,
-                    style: TextStyle(color: Theme.of(context).errorColor),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: paddingXXLarge,
-              ),
-              const Spacer(),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    bloc.add(const SignInWithGoogleSignInEvent());
-                  }.when(
-                    condition: state is! SignInWithGoogleSigningInState,
-                  ),
-                  child: state is SignInWithGoogleSigningInState
-                      ? const SizedBox.square(
-                          dimension: iconSizeSmall,
-                          child: CircularProgressIndicator(
-                            strokeWidth: strokeWidthSmall,
+                DefaultValueSwitcher<GenerateLocalizedString>(
+                  value: isFailed ? state.message : (x) => '',
+                  builder: (value) => MessageBox.error(
+                    margin: const EdgeInsets.only(
+                      top: paddingMedium,
+                    ),
+                    message: value,
+                  ).when(condition: isFailed),
+                ),
+                const SizedBox(
+                  height: paddingXXLarge,
+                ),
+                const Spacer(),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      bloc.add(const SignInWithGoogleSignInEvent());
+                    }.when(
+                      condition: state is! SignInWithGoogleSigningInState,
+                    ),
+                    child: state is SignInWithGoogleSigningInState
+                        ? const SizedBox.square(
+                            dimension: iconSizeSmall,
+                            child: CircularProgressIndicator(
+                              strokeWidth: strokeWidthSmall,
+                            ),
+                          )
+                        : LocalizedText(
+                            (x) => x.signInWithGoogleScreenRetry,
                           ),
-                        )
-                      : LocalizedText(
-                          (x) => x.signInWithGoogleScreenRetry,
-                        ),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

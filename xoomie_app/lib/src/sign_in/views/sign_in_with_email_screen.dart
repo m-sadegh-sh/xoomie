@@ -5,7 +5,7 @@ import 'package:xoomie/src/base/screens/screen_base.dart';
 import 'package:xoomie/src/base/widgets/auto_unfocus.dart';
 import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
 import 'package:xoomie/src/base/widgets/localized_text.dart';
-import 'package:xoomie/src/extensions/function.dart';
+import 'package:xoomie/src/extensions/generic.dart';
 import 'package:xoomie/src/sign_in/bloc/sign_in_with_email_bloc.dart';
 import 'package:xoomie/src/sign_in/bloc/sign_in_with_email_state.dart';
 import 'package:xoomie/src/styling/variables.dart';

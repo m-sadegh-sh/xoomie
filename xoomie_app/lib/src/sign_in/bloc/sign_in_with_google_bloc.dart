@@ -25,7 +25,6 @@ class SignInWithGoogleBloc
     try {
       emit(const SignInWithGoogleSigningInState());
 
-      throw Exception("aaa");
       await repository.signInWithGoogle();
 
       emit(const SignInWithGoogleSignedInState());
