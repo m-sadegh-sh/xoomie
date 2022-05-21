@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD_HT7svZGIVt4qu26ucN2JH8ETh939nYQ',
-    appId: '1:877184783974:android:41130e33c151ced82abfa7',
-    messagingSenderId: '877184783974',
+    apiKey: 'AIzaSyAdnkqUNu7C-kU42L46LfFZQkNddMPJWVY',
+    appId: '1:436041232880:android:e5081143059e5e60b32d35',
+    messagingSenderId: '436041232880',
     projectId: 'io-webplex-xoomie',
     storageBucket: 'io-webplex-xoomie.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCMNUkD8VJZtvICJSSkelLfIlpXiTLh9b0',
-    appId: '1:877184783974:ios:440727706eb2743e2abfa7',
-    messagingSenderId: '877184783974',
+    apiKey: 'AIzaSyA-bUHaJ-yfcdi7keETUcI-bvF9BGtKyok',
+    appId: '1:436041232880:ios:0fb92efe8b9f1e85b32d35',
+    messagingSenderId: '436041232880',
     projectId: 'io-webplex-xoomie',
     storageBucket: 'io-webplex-xoomie.appspot.com',
-    iosClientId:
-        '877184783974-l8ta8tkrh2aa0qvojkbhbjco8qe8s2r8.apps.googleusercontent.com',
+    iosClientId: '436041232880-k5la7ankpdl8esge39h913s2jaro3k2v.apps.googleusercontent.com',
     iosBundleId: 'io.webplex.xoomie',
   );
 }

@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "877184783974",
+    "project_number": "436041232880",
     "project_id": "io-webplex-xoomie",
     "storage_bucket": "io-webplex-xoomie.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:877184783974:android:41130e33c151ced82abfa7",
+        "mobilesdk_app_id": "1:436041232880:android:e5081143059e5e60b32d35",
         "android_client_info": {
           "package_name": "io.webplex.xoomie"
         }
       },
       "oauth_client": [
         {
-          "client_id": "877184783974-dpl3hftqlv89hk2vacq2jk4hq4qiok77.apps.googleusercontent.com",
+          "client_id": "436041232880-63juum6kc17faqv9qmaouj28u1dukci3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_HT7svZGIVt4qu26ucN2JH8ETh939nYQ"
+          "current_key": "AIzaSyAdnkqUNu7C-kU42L46LfFZQkNddMPJWVY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "877184783974-dpl3hftqlv89hk2vacq2jk4hq4qiok77.apps.googleusercontent.com",
+              "client_id": "436041232880-63juum6kc17faqv9qmaouj28u1dukci3.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "877184783974-l8ta8tkrh2aa0qvojkbhbjco8qe8s2r8.apps.googleusercontent.com",
+              "client_id": "436041232880-k5la7ankpdl8esge39h913s2jaro3k2v.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "io.webplex.xoomie"
