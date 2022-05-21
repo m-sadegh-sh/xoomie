@@ -1,43 +1,53 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vomie/src/router/bloc/router_event.dart';
-import 'package:vomie/src/router/bloc/router_state.dart';
+import 'package:zoomie/src/router/bloc/router_event.dart';
+import 'package:zoomie/src/router/bloc/router_state.dart';
 
 class RouterBloc extends Bloc<RouterEventBase, RouterStateBase> {
-  RouterBloc() : super(const RouterSplashState()) {
-    on<RouterGoToSplashEvent>(_onGoToSplash);
-    on<RouterGoToIntroductionEvent>(_onGoToIntroduction);
-    on<RouterGoToGettingStartedEvent>(_onGoToGettingStarted);
-    on<RouterGoToAuthEvent>(_onGoToAuth);
+  RouterBloc() : super(const RouterInitialState()) {
+    on<RouterResetEvent>(_onReset);
+    on<RouterGoToSignUpMethodEvent>(_onGoToSignUpMethod);
+    on<RouterGoToSignUpWithEmailEvent>(_onGoToSignUpWithEmail);
+    on<RouterGoToSignInMethodEvent>(_onGoToSignInMethod);
+    on<RouterGoToSignInWithEmailEvent>(_onGoToSignInWithEmail);
+    on<RouterGoToSignInWithGoogleEvent>(_onGoToSignInWithGoogle);
     on<RouterGoToHomeEvent>(_onGoToMain);
   }
 
-  void _onGoToSplash(
-    RouterGoToSplashEvent event,
+  void _onReset(
+    RouterResetEvent event,
     Emitter<RouterStateBase> emit,
   ) =>
-      emit(const RouterSplashState());
+      emit(const RouterInitialState());
 
-  void _onGoToIntroduction(
-    RouterGoToIntroductionEvent event,
+  void _onGoToSignUpMethod(
+    RouterGoToSignUpMethodEvent event,
     Emitter<RouterStateBase> emit,
   ) =>
-      emit(const RouterIntroductionState());
+      emit(const RouterSignUpMethodState());
 
-  void _onGoToGettingStarted(
-    RouterGoToGettingStartedEvent event,
+  void _onGoToSignUpWithEmail(
+    RouterGoToSignUpWithEmailEvent event,
     Emitter<RouterStateBase> emit,
   ) =>
-      emit(const RouterGettingStartedState());
+      emit(const RouterSignUpWithEmailState());
 
-  void _onGoToAuth(
-    RouterGoToAuthEvent event,
+  void _onGoToSignInMethod(
+    RouterGoToSignInMethodEvent event,
     Emitter<RouterStateBase> emit,
   ) =>
-      emit(
-        RouterAuthState(
-          authMode: event.authMode,
-        ),
-      );
+      emit(const RouterSignInMethodState());
+
+  void _onGoToSignInWithEmail(
+    RouterGoToSignInWithEmailEvent event,
+    Emitter<RouterStateBase> emit,
+  ) =>
+      emit(const RouterSignInWithEmailState());
+
+  void _onGoToSignInWithGoogle(
+    RouterGoToSignInWithGoogleEvent event,
+    Emitter<RouterStateBase> emit,
+  ) =>
+      emit(const RouterSignInWithGoogleState());
 
   void _onGoToMain(
     RouterGoToHomeEvent event,

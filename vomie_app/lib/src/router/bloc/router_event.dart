@@ -1,32 +1,32 @@
-import 'package:vomie/src/auth/models/auth_mode.dart';
-import 'package:vomie/src/base/bloc/event_base.dart';
-import 'package:vomie/src/router/models/home_contents.dart';
+import 'package:zoomie/src/base/bloc/event_base.dart';
+import 'package:zoomie/src/router/models/home_contents.dart';
 
 abstract class RouterEventBase extends EventBase {
   const RouterEventBase();
 }
 
-class RouterGoToSplashEvent extends RouterEventBase {
-  const RouterGoToSplashEvent();
+class RouterResetEvent extends RouterEventBase {
+  const RouterResetEvent();
 }
 
-class RouterGoToIntroductionEvent extends RouterEventBase {
-  const RouterGoToIntroductionEvent();
+class RouterGoToSignUpMethodEvent extends RouterEventBase {
+  const RouterGoToSignUpMethodEvent();
 }
 
-class RouterGoToGettingStartedEvent extends RouterEventBase {
-  const RouterGoToGettingStartedEvent();
+class RouterGoToSignUpWithEmailEvent extends RouterEventBase {
+  const RouterGoToSignUpWithEmailEvent();
 }
 
-class RouterGoToAuthEvent extends RouterEventBase {
-  final AuthMode authMode;
+class RouterGoToSignInMethodEvent extends RouterEventBase {
+  const RouterGoToSignInMethodEvent();
+}
 
-  const RouterGoToAuthEvent({
-    required this.authMode,
-  });
+class RouterGoToSignInWithEmailEvent extends RouterEventBase {
+  const RouterGoToSignInWithEmailEvent();
+}
 
-  @override
-  List<Object?> get props => [authMode];
+class RouterGoToSignInWithGoogleEvent extends RouterEventBase {
+  const RouterGoToSignInWithGoogleEvent();
 }
 
 class RouterGoToHomeEvent extends RouterEventBase {

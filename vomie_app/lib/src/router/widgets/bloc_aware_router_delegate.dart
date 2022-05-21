@@ -1,10 +1,21 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vomie/src/router/bloc/router_bloc.dart';
-import 'package:vomie/src/router/bloc/router_event.dart';
-import 'package:vomie/src/router/bloc/router_state.dart';
-import 'package:vomie/src/splash/views/splash_page.dart';
-import 'package:vomie/src/unknown/views/unknown_page.dart';
+import 'package:zoomie/src/auth/bloc/auth_bloc.dart';
+import 'package:zoomie/src/auth/bloc/auth_state.dart';
+import 'package:zoomie/src/home/views/home_page.dart';
+import 'package:zoomie/src/introduction/views/introduction_page.dart';
+import 'package:zoomie/src/router/bloc/router_bloc.dart';
+import 'package:zoomie/src/router/bloc/router_event.dart';
+import 'package:zoomie/src/router/bloc/router_state.dart';
+import 'package:zoomie/src/sign_in/views/sign_in_method_page.dart';
+import 'package:zoomie/src/sign_in/views/sign_in_with_email_page.dart';
+import 'package:zoomie/src/sign_in/views/sign_in_with_google_page.dart';
+import 'package:zoomie/src/sign_up/views/sign_up_method_page.dart';
+import 'package:zoomie/src/sign_up/views/sign_up_with_email_page.dart';
+import 'package:zoomie/src/splash/bloc/splash_bloc.dart';
+import 'package:zoomie/src/splash/bloc/splash_state.dart';
+import 'package:zoomie/src/splash/views/splash_page.dart';
+import 'package:zoomie/src/unknown/views/unknown_page.dart';
 
 class BlocAwareRouterDelegate extends RouterDelegate
     with ChangeNotifier, PopNavigatorRouterDelegateMixin {
@@ -19,48 +30,73 @@ class BlocAwareRouterDelegate extends RouterDelegate
   Widget build(BuildContext context) {
     final routerBloc = BlocProvider.of<RouterBloc>(context);
 
-    return BlocBuilder<RouterBloc, RouterStateBase>(
-      builder: (_, state) {
-        return Navigator(
-          key: _navigatorKey,
-          pages: _stateToPages(state),
-          onPopPage: (route, result) {
-            if (!route.didPop(result)) return false;
-
-            // TODO: Handle pop event by updating RouterBloc.
-
-            if (state is RouterGettingStartedState) {
-              routerBloc.add(
-                const RouterGoToIntroductionEvent(),
-              );
-            } else if (state is RouterAuthState) {
-              routerBloc.add(
-                const RouterGoToIntroductionEvent(),
-              );
-            }
-
-            return true;
-          },
-        );
+    return BlocListener<AuthBloc, AuthStateBase>(
+      listener: (_, state) {
+        if (state is AuthAnonymousState) {
+          routerBloc.add(const RouterResetEvent());
+        }
       },
+      child: BlocBuilder<SplashBloc, SplashStateBase>(
+        builder: (_, splashState) => BlocBuilder<RouterBloc, RouterStateBase>(
+          builder: (_, routerState) => BlocBuilder<AuthBloc, AuthStateBase>(
+            builder: (_, authState) {
+              return Navigator(
+                key: _navigatorKey,
+                pages: _createPages(splashState, routerState, authState),
+                onPopPage: (route, result) {
+                  if (!route.didPop(result)) return false;
+
+                  if (routerState is RouterSignInWithStateBase) {
+                    routerBloc.add(
+                      const RouterGoToSignInMethodEvent(),
+                    );
+                  } else if (routerState is RouterSignUpWithStateBase) {
+                    routerBloc.add(
+                      const RouterGoToSignUpMethodEvent(),
+                    );
+                  } else if (routerState is RouterSignInMethodState ||
+                      routerState is RouterSignUpMethodState) {
+                    routerBloc.add(
+                      const RouterResetEvent(),
+                    );
+                  }
+
+                  return true;
+                },
+              );
+            },
+          ),
+        ),
+      ),
     );
   }
 
-  List<Page> _stateToPages(RouterStateBase state) {
+  List<Page> _createPages(
+    SplashStateBase splashState,
+    RouterStateBase routerState,
+    AuthStateBase authState,
+  ) {
+    if (splashState is! SplashInitializedState) {
+      return [const SplashPage()];
+    }
+
     return [
-      if (state is RouterSplashState)
-        const SplashPage()
-      // else if (state is RouterStartState)
-      //   const StartPage()
-      // else if (state is RouterGettingStartedState) ...[
-      //   const StartPage(),
-      //   const GettingStartedPage(),
-      // ] else if (state is RouterAuthState) ...[
-      //   const StartPage(),
-      //   AuthFormPage(authMode: state.authMode),
-      // ] else if (state is RouterHomeState)
-      //   const HomePage()
-      else
+      if (authState is AuthAnonymousState) ...[
+        const IntroductionPage(),
+        if (routerState is RouterSignUpMethodState) ...[
+          const SignUpMethodPage(),
+          if (routerState is RouterSignUpWithEmailState)
+            const SignUpWithEmailPage()
+        ] else if (routerState is RouterSignInMethodState) ...[
+          const SignInMethodPage(),
+          if (routerState is RouterSignInWithEmailState)
+            const SignInWithEmailPage(),
+          if (routerState is RouterSignInWithGoogleState)
+            const SignInWithGooglePage()
+        ],
+      ] else if (authState is AuthAuthenticatedState) ...[
+        const HomePage(),
+      ] else
         const UnknownPage(),
     ];
   }

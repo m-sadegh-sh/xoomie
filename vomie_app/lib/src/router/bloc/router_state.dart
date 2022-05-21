@@ -1,32 +1,40 @@
-import 'package:vomie/src/auth/models/auth_mode.dart';
-import 'package:vomie/src/base/bloc/state_base.dart';
-import 'package:vomie/src/router/models/home_contents.dart';
+import 'package:zoomie/src/base/bloc/state_base.dart';
+import 'package:zoomie/src/router/models/home_contents.dart';
 
 abstract class RouterStateBase extends StateBase {
   const RouterStateBase();
 }
 
-class RouterSplashState extends RouterStateBase {
-  const RouterSplashState();
+class RouterInitialState extends RouterStateBase {
+  const RouterInitialState();
 }
 
-class RouterIntroductionState extends RouterStateBase {
-  const RouterIntroductionState();
+class RouterSignUpMethodState extends RouterStateBase {
+  const RouterSignUpMethodState();
 }
 
-class RouterGettingStartedState extends RouterStateBase {
-  const RouterGettingStartedState();
+abstract class RouterSignUpWithStateBase extends RouterSignUpMethodState {
+  const RouterSignUpWithStateBase();
 }
 
-class RouterAuthState extends RouterStateBase {
-  final AuthMode authMode;
+class RouterSignUpWithEmailState extends RouterSignUpWithStateBase {
+  const RouterSignUpWithEmailState();
+}
 
-  const RouterAuthState({
-    required this.authMode,
-  });
+class RouterSignInMethodState extends RouterStateBase {
+  const RouterSignInMethodState();
+}
 
-  @override
-  List<Object?> get props => [authMode];
+abstract class RouterSignInWithStateBase extends RouterSignInMethodState {
+  const RouterSignInWithStateBase();
+}
+
+class RouterSignInWithEmailState extends RouterSignInWithStateBase {
+  const RouterSignInWithEmailState();
+}
+
+class RouterSignInWithGoogleState extends RouterSignInWithStateBase {
+  const RouterSignInWithGoogleState();
 }
 
 class RouterHomeState extends RouterStateBase {
