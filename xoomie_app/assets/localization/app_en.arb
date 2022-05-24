@@ -6,6 +6,10 @@
   "commonTermsOfUse": "Terms of use",
   "commonPrivacyPolicy": "Privacy policy",
 
+  "unknownTitle": "No no no!",
+  "unknownDescription": "Something weird is happened! We couldn't find what you're looking for.",
+  "unknownStartOver": "Let's start over!",
+
   "formValidationRequired": "This field is required.",
   "formValidationEmail": "The email address is badly formatted.",
 
