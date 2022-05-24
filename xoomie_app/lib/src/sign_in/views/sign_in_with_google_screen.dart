@@ -20,7 +20,6 @@ class SignInWithGoogleScreen extends ScreenBase {
   Widget buildBody(BuildContext context) {
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
-    final bloc = BlocProvider.of<SignInWithGoogleBloc>(context);
 
     return BlocBuilder<SignInWithGoogleBloc, SignInWithGoogleStateBase>(
       builder: (_, state) {
@@ -61,35 +60,41 @@ class SignInWithGoogleScreen extends ScreenBase {
                     message: value,
                   ).when(condition: isFailed),
                 ),
-                const SizedBox(
-                  height: paddingXXLarge,
-                ),
-                const Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      bloc.add(const SignInWithGoogleSignInEvent());
-                    }.when(
-                      condition: state is! SignInWithGoogleSigningInState,
-                    ),
-                    child: state is SignInWithGoogleSigningInState
-                        ? const SizedBox.square(
-                            dimension: iconSizeSmall,
-                            child: CircularProgressIndicator(
-                              strokeWidth: strokeWidthSmall,
-                            ),
-                          )
-                        : LocalizedText(
-                            (x) => x.signInWithGoogleScreenRetry,
-                          ),
-                  ),
-                ),
               ],
             ),
           ),
         );
       },
     );
+  }
+
+  @override
+  List<Widget>? persistentFooterButtons(BuildContext context) {
+    final bloc = BlocProvider.of<SignInWithGoogleBloc>(context);
+
+    return [
+      BlocBuilder<SignInWithGoogleBloc, SignInWithGoogleStateBase>(
+        builder: (context, state) => SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: () {
+              bloc.add(const SignInWithGoogleSignInEvent());
+            }.when(
+              condition: state is! SignInWithGoogleSigningInState,
+            ),
+            child: state is SignInWithGoogleSigningInState
+                ? const SizedBox.square(
+                    dimension: iconSizeSmall,
+                    child: CircularProgressIndicator(
+                      strokeWidth: strokeWidthSmall,
+                    ),
+                  )
+                : LocalizedText(
+                    (x) => x.signInWithGoogleScreenRetry,
+                  ),
+          ),
+        ),
+      ),
+    ];
   }
 }

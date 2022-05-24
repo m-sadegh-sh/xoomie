@@ -3,8 +3,10 @@ import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 import 'package:xoomie/src/base/bloc/localized_error_builder.dart';
 import 'package:xoomie/src/base/screens/screen_base.dart';
 import 'package:xoomie/src/base/widgets/auto_unfocus.dart';
+import 'package:xoomie/src/base/widgets/default_value_switcher.dart';
 import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
 import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/base/widgets/message_box.dart';
 import 'package:xoomie/src/extensions/generic.dart';
 import 'package:xoomie/src/sign_up/bloc/sign_up_with_email_bloc.dart';
 import 'package:xoomie/src/sign_up/bloc/sign_up_with_email_state.dart';
@@ -19,57 +21,76 @@ class SignUpWithEmailScreen extends ScreenBase {
   Widget buildBody(BuildContext context) {
     final theme = Theme.of(context);
     final textTheme = theme.textTheme;
-    final bloc = BlocProvider.of<SignUpWithEmailBloc>(context);
 
     return ExpandedSingleChildScrollView.child(
       child: Padding(
         padding: const EdgeInsets.all(paddingXXLarge),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            LocalizedText(
-              (x) => x.signUpWithEmailScreenTitle,
-              style: textTheme.titleLarge,
-            ),
-            const SizedBox(
-              height: paddingXSmall,
-            ),
-            LocalizedText(
-              (x) => x.signUpWithEmailScreenDescription,
-              style: textTheme.bodySmall,
-            ),
-            const SizedBox(
-              height: paddingLarge,
-            ),
-            _Form(),
-            const SizedBox(
-              height: paddingXXLarge,
-            ),
-            BlocBuilder<SignUpWithEmailBloc, SignUpWithEmailStateBase>(
-              builder: (context, state) => SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: bloc.submit.when(
-                    condition: state is! SignUpWithEmailSigningUpState,
-                  ),
-                  child: state is SignUpWithEmailSigningUpState
-                      ? const SizedBox.square(
-                          dimension: iconSizeSmall,
-                          child: CircularProgressIndicator(
-                            strokeWidth: strokeWidthSmall,
-                          ),
-                        )
-                      : LocalizedText(
-                          (x) => x.signUpWithEmailScreenSignUp,
-                        ),
+        child: BlocBuilder<SignUpWithEmailBloc, SignUpWithEmailStateBase>(
+          builder: (context, state) {
+            final isFailed = state is SignUpWithEmailSignUpFailedState;
+
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                LocalizedText(
+                  (x) => x.signUpWithEmailScreenTitle,
+                  style: textTheme.titleLarge,
                 ),
-              ),
-            ),
-          ],
+                const SizedBox(
+                  height: paddingXSmall,
+                ),
+                LocalizedText(
+                  (x) => x.signUpWithEmailScreenDescription,
+                  style: textTheme.bodySmall,
+                ),
+                const SizedBox(
+                  height: paddingLarge,
+                ),
+                _Form(),
+                DefaultValueSwitcher<GenerateLocalizedString>(
+                  value: isFailed ? state.failureResponse : (x) => '',
+                  builder: (value) => MessageBox.error(
+                    margin: const EdgeInsets.only(
+                      top: paddingMedium,
+                    ),
+                    message: value,
+                  ).when(condition: isFailed),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
+  }
+
+  @override
+  List<Widget>? persistentFooterButtons(BuildContext context) {
+    final bloc = BlocProvider.of<SignUpWithEmailBloc>(context);
+
+    return [
+      BlocBuilder<SignUpWithEmailBloc, SignUpWithEmailStateBase>(
+        builder: (context, state) => SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: bloc.submit.when(
+              condition: state is! SignUpWithEmailSigningUpState,
+            ),
+            child: state is SignUpWithEmailSigningUpState
+                ? const SizedBox.square(
+                    dimension: iconSizeSmall,
+                    child: CircularProgressIndicator(
+                      strokeWidth: strokeWidthSmall,
+                    ),
+                  )
+                : LocalizedText(
+                    (x) => x.signUpWithEmailScreenSignUp,
+                  ),
+          ),
+        ),
+      ),
+    ];
   }
 }
 
@@ -80,19 +101,8 @@ class _Form extends StatelessWidget {
 
     return BlocListener<SignUpWithEmailBloc, SignUpWithEmailStateBase>(
       listener: (_, state) {
-        ScaffoldMessenger.of(context).clearSnackBars();
-
         if (state is SignUpWithEmailSigningUpState) {
           AutoUnfocus.tryToUnfocus(context);
-        } else if (state is SignUpWithEmailSignUpFailedState) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              backgroundColor: Theme.of(context).errorColor,
-              content: LocalizedText(
-                state.failureResponse,
-              ),
-            ),
-          );
         }
       },
       child: BlocBuilder<SignUpWithEmailBloc, SignUpWithEmailStateBase>(
@@ -123,6 +133,7 @@ class _Form extends StatelessWidget {
                 ),
               ),
               isEnabled: state is! SignUpWithEmailSigningUpState,
+              onSubmitted: (_) => bloc.submit(),
               obscureText: true,
             ),
           ],

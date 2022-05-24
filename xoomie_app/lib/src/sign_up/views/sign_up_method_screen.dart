@@ -32,7 +32,7 @@ class SignUpMethodScreen extends ScreenBase {
                 builder: (_, BoxConstraints constraints) {
                   return SizedBox(
                     height: constraints.maxWidth * 0.4,
-                    child: Assets.images.splashLogo.image(),
+                    child: Assets.images.appLogo.svg(),
                   );
                 },
               ),

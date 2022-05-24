@@ -39,7 +39,7 @@ class _SplashLogo extends StatelessWidget {
           builder: (_, BoxConstraints constraints) {
             return SizedBox(
               height: constraints.maxWidth * 0.5,
-              child: Assets.images.splashLogo.image(),
+              child: Assets.images.appLogo.svg(),
             );
           },
         ),
