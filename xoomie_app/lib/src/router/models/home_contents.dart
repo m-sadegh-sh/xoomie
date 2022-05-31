@@ -1,7 +1,4 @@
 enum HomeContents {
-  movies,
-  profile,
-  explore,
+  random,
   search,
-  preferences,
 }

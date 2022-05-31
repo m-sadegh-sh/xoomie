@@ -56,5 +56,10 @@
   "signInWithGoogleScreenTitle": "Sign in with Google",
   "signInWithGoogleScreenSigninIn": "Please wait will we're signing in you.",
   "signInWithGoogleScreenSignInFailed": "Failed to sign you in using Google. To make another try, tap on the \"Retry\" button.",
-  "signInWithGoogleScreenRetry": "Retry"
+  "signInWithGoogleScreenRetry": "Retry",
+
+  "homeActiveContentRandom": "Random",
+  "homeActiveContentSearch": "Search",
+
+  "photosBlocLoadFailed": "Failed to load photos."
 }
