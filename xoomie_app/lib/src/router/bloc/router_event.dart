@@ -33,7 +33,7 @@ class RouterGoToHomeEvent extends RouterEventBase {
   final HomeContents selectedContent;
 
   const RouterGoToHomeEvent({
-    required this.selectedContent,
+    this.selectedContent = HomeContents.random,
   });
 
   @override
