@@ -220,6 +220,12 @@ final lightTheme = baseTheme.copyWith(
   colorScheme: ColorScheme.fromSwatch(
     primarySwatch: lightAccentColorSwatch,
   ).copyWith(secondary: lightAccentColor),
+  bottomNavigationBarTheme: baseTheme.bottomNavigationBarTheme.copyWith(
+    elevation: 0.0,
+    backgroundColor: lightGrey1Color,
+    unselectedItemColor: lightBottomNavigationUnselectedItemColor,
+    selectedItemColor: lightBottomNavigationSelectedItemColor,
+  ),
   inputDecorationTheme: baseTheme.inputDecorationTheme.copyWith(
     border: createInputBorder(
       borderColor: lightGrey1Color,

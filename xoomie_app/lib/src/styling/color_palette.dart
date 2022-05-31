@@ -24,20 +24,17 @@ const lightSystemBarsColor = transparentColor;
 const lightPrimaryColor = whiteColor;
 const lightAccentColor = whiteColor;
 const lightCanvasColor = whiteColor;
-const lightControlsSelectedColor = controlsColor;
-const lightControlsDisabledColor = controlsDisabledColor;
-const lightSwitchTrackSelectedColor = switchTrackSelectedColor;
-const lightSwitchTrackDisabledColor = switchTrackDisabledColor;
-const lightDividerColor = dividerColor;
+const lightBottomNavigationUnselectedItemColor = Color(0xFFADAFBB);
+const lightBottomNavigationSelectedItemColor = brandColor;
 
 final lightAccentColorSwatch = lightAccentColor.toMaterialColor();
 final lightControlsColorSwatch = createMaterial(
-  selected: lightControlsSelectedColor,
-  disabled: lightControlsDisabledColor,
+  selected: controlsColor,
+  disabled: controlsDisabledColor,
 );
 final lightSwitchTrackColorSwatch = createMaterial(
-  selected: lightSwitchTrackSelectedColor,
-  disabled: lightSwitchTrackDisabledColor,
+  selected: switchTrackSelectedColor,
+  disabled: switchTrackDisabledColor,
 );
 
 /// Dark theme colors
