@@ -1,6 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:xoomie/src/styling/color_palette.dart';
+import 'package:xoomie/src/base/widgets/default_transition_switcher.dart';
 
 class DefaultWidgetSwitcher extends StatelessWidget {
   final Duration duration;
@@ -20,17 +20,9 @@ class DefaultWidgetSwitcher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageTransitionSwitcher(
+    return DefaultTransitionSwitcher(
       duration: duration,
-      transitionBuilder: (child, animation, secondaryAnimation) {
-        return SharedAxisTransition(
-          animation: animation,
-          secondaryAnimation: secondaryAnimation,
-          transitionType: transitionType,
-          fillColor: transparentColor,
-          child: child,
-        );
-      },
+      transitionType: transitionType,
       child: Container(
         key: ValueKey(
           showPrimary ? 'primary' : 'secondary',
