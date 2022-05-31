@@ -34,6 +34,8 @@ class BlocAwareRouterDelegate extends RouterDelegate
       listener: (_, state) {
         if (state is AuthAnonymousState) {
           routerBloc.add(const RouterResetEvent());
+        } else if (state is AuthAuthenticatedState) {
+          routerBloc.add(const RouterGoToHomeEvent());
         }
       },
       child: BlocBuilder<SplashBloc, SplashStateBase>(
