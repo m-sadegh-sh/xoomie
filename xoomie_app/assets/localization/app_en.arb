@@ -58,8 +58,12 @@
   "signInWithGoogleScreenSignInFailed": "Failed to sign you in using Google. To make another try, tap on the \"Retry\" button.",
   "signInWithGoogleScreenRetry": "Retry",
 
-  "homeActiveContentRandom": "Random",
-  "homeActiveContentSearch": "Search",
+  "homeBottomNavigationBarRandom": "Random",
+  "homeBottomNavigationBarSearch": "Search",
+  "homeScreenRandomTitle": "Random",
+  "homeScreenSearchTitle": "Search",
+  "homeRandomPhotosTitle": "Photos",
+  "homeRandomPhotosDescription": "This is a list of random photos matches your filters.",
 
   "photosBlocLoadFailed": "Failed to load photos."
 }

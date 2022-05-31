@@ -28,12 +28,12 @@ class NavigationItem {
 final items = [
   NavigationItem(
     icon: Icons.home,
-    label: (x) => x.homeActiveContentRandom,
+    label: (x) => x.homeBottomNavigationBarRandom,
     content: HomeContents.random,
   ),
   NavigationItem(
     icon: Icons.search,
-    label: (x) => x.homeActiveContentSearch,
+    label: (x) => x.homeBottomNavigationBarSearch,
     content: HomeContents.search,
   ),
 ];
