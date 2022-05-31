@@ -82,15 +82,15 @@ class SignInWithGoogleScreen extends ScreenBase {
             }.when(
               condition: state is! SignInWithGoogleSigningInState,
             ),
-            child: state is SignInWithGoogleSigningInState
-                ? const SizedBox.square(
+            child: state is SignInWithGoogleSignInFailedState
+                ? LocalizedText(
+                    (x) => x.signInWithGoogleScreenRetry,
+                  )
+                : const SizedBox.square(
                     dimension: iconSizeSmall,
                     child: CircularProgressIndicator(
                       strokeWidth: strokeWidthSmall,
                     ),
-                  )
-                : LocalizedText(
-                    (x) => x.signInWithGoogleScreenRetry,
                   ),
           ),
         ),

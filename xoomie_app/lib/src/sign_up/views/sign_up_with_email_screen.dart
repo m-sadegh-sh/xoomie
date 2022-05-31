@@ -77,15 +77,15 @@ class SignUpWithEmailScreen extends ScreenBase {
             onPressed: bloc.submit.when(
               condition: state is! SignUpWithEmailSigningUpState,
             ),
-            child: state is SignUpWithEmailSigningUpState
-                ? const SizedBox.square(
+            child: state is SignUpWithEmailSignUpFailedState
+                ? LocalizedText(
+                    (x) => x.signUpWithEmailScreenSignUp,
+                  )
+                : const SizedBox.square(
                     dimension: iconSizeSmall,
                     child: CircularProgressIndicator(
                       strokeWidth: strokeWidthSmall,
                     ),
-                  )
-                : LocalizedText(
-                    (x) => x.signUpWithEmailScreenSignUp,
                   ),
           ),
         ),
