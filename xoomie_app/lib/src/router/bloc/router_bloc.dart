@@ -10,7 +10,7 @@ class RouterBloc extends Bloc<RouterEventBase, RouterStateBase> {
     on<RouterGoToSignInMethodEvent>(_onGoToSignInMethod);
     on<RouterGoToSignInWithEmailEvent>(_onGoToSignInWithEmail);
     on<RouterGoToSignInWithGoogleEvent>(_onGoToSignInWithGoogle);
-    on<RouterGoToHomeEvent>(_onGoToMain);
+    on<RouterGoToHomeEvent>(_onGoToHome);
   }
 
   void _onReset(
@@ -49,7 +49,7 @@ class RouterBloc extends Bloc<RouterEventBase, RouterStateBase> {
   ) =>
       emit(const RouterSignInWithGoogleState());
 
-  void _onGoToMain(
+  void _onGoToHome(
     RouterGoToHomeEvent event,
     Emitter<RouterStateBase> emit,
   ) =>
