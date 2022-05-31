@@ -5,6 +5,7 @@ import 'package:xoomie/src/base/screens/screen_base.dart';
 import 'package:xoomie/src/base/widgets/expanded_single_child_scroll_view.dart';
 import 'package:xoomie/src/base/widgets/footer_links.dart';
 import 'package:xoomie/src/base/widgets/localized_text.dart';
+import 'package:xoomie/src/base/widgets/region.dart';
 import 'package:xoomie/src/router/bloc/router_bloc.dart';
 import 'package:xoomie/src/router/bloc/router_event.dart';
 import 'package:xoomie/src/styling/variables.dart';
@@ -61,19 +62,9 @@ class SignInMethodScreen extends ScreenBase {
               const SizedBox(
                 height: paddingXXLarge,
               ),
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  const Divider(),
-                  Container(
-                    color: theme.canvasColor,
-                    padding: const EdgeInsets.all(paddingSmall),
-                    child: LocalizedText(
-                      (x) => x.signInMethodScreenOtherMethods,
-                      style: textTheme.bodySmall,
-                    ),
-                  ),
-                ],
+              Region.localizedText(
+                text: (x) => x.signInMethodScreenOtherMethods,
+                style: textTheme.bodySmall,
               ),
               const SizedBox(
                 height: paddingLarge,
